@@ -2,6 +2,8 @@
 
 [![tests](https://github.com/otawfik/pricepilot/actions/workflows/ci.yml/badge.svg)](https://github.com/otawfik/pricepilot/actions/workflows/ci.yml)
 
+**[▶ Live demo](https://pricepilot-tan.vercel.app)**
+
 **End-to-end retail price optimization: estimate demand elasticity, then price every SKU for maximum profit.**
 
 Most retailers price by gut feel and leave money on the table. PricePilot closes the loop: it takes raw transaction data, estimates each product's price elasticity of demand with econometric regression, and computes the profit-maximizing price under real business guardrails.
