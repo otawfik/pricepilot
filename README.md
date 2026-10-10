@@ -1,8 +1,12 @@
 # PricePilot
 
+[![tests](https://github.com/otawfik/pricepilot/actions/workflows/ci.yml/badge.svg)](https://github.com/otawfik/pricepilot/actions/workflows/ci.yml)
+
 **End-to-end retail price optimization: estimate demand elasticity, then price every SKU for maximum profit.**
 
 Most retailers price by gut feel and leave money on the table. PricePilot closes the loop: it takes raw transaction data, estimates each product's price elasticity of demand with econometric regression, and computes the profit-maximizing price under real business guardrails.
+
+![PricePilot dashboard: 60 SKUs, current vs optimized daily profit, top repricing opportunities](screenshots/app.jpg)
 
 ## The economics (the interesting part)
 
@@ -59,10 +63,3 @@ data/              # transactions.csv, elasticities.csv, optimized_prices.csv
 tests/             # 10 pytest tests
 ```
 
-## Resume bullets (copy-paste)
-
-- Built end-to-end price optimization engine (Python, scikit-learn, SciPy): estimated demand elasticity via log-log regression on 43.8K daily SKU observations across 60 SKUs, 60/60 statistically significant
-- Derived profit-optimal prices from the Lerner index under business guardrails (±30% move cap, 15% margin floor); simulation showed **+24.6% profit uplift (~$968K annualized)** on modeled catalog
-- Shipped CLI + Flask dashboard with what-if price simulator and elasticity diagnostics; 10-test pytest suite including elasticity recovery against known ground truth
-
-*All figures above are measured outputs of this codebase on its bundled simulated dataset.*
